@@ -1,0 +1,16 @@
+agent Switchy {
+    module Switches switches;
+    module Console C;
+
+    types eg {
+        formula switch(string, string);
+    }
+
+    rule +!main(list args) {
+        switches.create("s1");
+    }
+
+    rule +switch(string name, string state) {
+        C.println("Switch: " + name + " is in state: " + state);
+    }
+}

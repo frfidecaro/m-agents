@@ -6,6 +6,10 @@
 	<artifactId>light-switch</artifactId>
 	<version>0.1.0</version>
 
+    <properties>
+        <astra.main>Switchy</astra.main>
+    </properties>
+    
     <parent>
         <groupId>com.astralanguage</groupId>
         <artifactId>astra-base</artifactId>

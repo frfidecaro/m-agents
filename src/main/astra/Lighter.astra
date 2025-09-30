@@ -1,0 +1,17 @@
+agent Lighter {
+    module Lights lights;
+    module Console C;
+
+    types eg {
+        formula light(string, string);
+    }
+
+    rule +!main(list args) {
+        lights.create("l1");
+        lights.set("l1", "on");
+    }
+
+    rule +light(string name, string state) {
+        C.println("Light: " + name + " is in state: " + state);
+    }
+}

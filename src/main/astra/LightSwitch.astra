@@ -1,4 +1,4 @@
-agent Main {
+agent LightSwitch {
     module Switches switches;
     module Lights lights;
     module Console C;
@@ -7,8 +7,8 @@ agent Main {
         formula switch(string, string);
         formula light(string, string);
         formula transition(string, string);
-        formula connection(string, string);
     }
+
 
     rule +!main(list args) {
         switches.create("s1");
