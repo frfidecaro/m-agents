@@ -1,0 +1,17 @@
+agent Main {
+    module Switches switches;
+    module Lights lights;
+    module Console C;
+
+    types light {
+        formula switch(string, string);
+        formula light(string, string);
+        formula transition(string, string);
+        formula connection(string, string);
+    }
+
+    rule +!main(list args) {
+        switches.create("s1");
+        lights.create("l1");
+    }
+}
